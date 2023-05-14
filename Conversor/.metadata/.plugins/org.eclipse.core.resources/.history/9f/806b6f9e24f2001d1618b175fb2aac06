@@ -1,0 +1,5 @@
+package com.maxisoriano.conversores.modelo;
+
+public class ConversorDeTemperatura {
+
+}

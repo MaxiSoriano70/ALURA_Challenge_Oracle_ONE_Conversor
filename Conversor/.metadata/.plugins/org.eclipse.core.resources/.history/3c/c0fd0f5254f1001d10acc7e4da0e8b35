@@ -1,0 +1,67 @@
+package com.maxisoriano.conversores.modelo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ConversorDeMoneda {
+	private static String monedaLocal;
+	private float monto;
+	private static List<MonedaExtranjera> listaMonedasExtranjeras = new ArrayList<>();
+	
+	public ConversorDeMoneda(float monto) {
+		this.monto = monto;
+	}
+	
+	static {
+		MonedaExtranjera dolar=new MonedaExtranjera("Dolar",227.37F);
+		MonedaExtranjera euro=new MonedaExtranjera("Euro", 248.71F);
+		MonedaExtranjera libra=new MonedaExtranjera("Libra", 283.04F);
+		MonedaExtranjera yen=new MonedaExtranjera("Yen", 1.67F);
+		ConversorDeMoneda.listaMonedasExtranjeras.add(dolar);
+		ConversorDeMoneda.listaMonedasExtranjeras.add(euro);
+		ConversorDeMoneda.listaMonedasExtranjeras.add(libra);
+		ConversorDeMoneda.listaMonedasExtranjeras.add(yen);
+	}
+
+	public static String getMonedaLocal() {
+		return monedaLocal;
+	}
+
+	public static void setMonedaLocal(String monedaLocal) {
+		ConversorDeMoneda.monedaLocal = monedaLocal;
+	}
+
+	public float getMonto() {
+		return monto;
+	}
+
+	public void setMonto(float monto) {
+		this.monto = monto;
+	}
+
+	public static List<MonedaExtranjera> getListaMonedasExtranjeras() {
+		return listaMonedasExtranjeras;
+	}
+
+	public static void setListaMonedasExtranjeras(List<MonedaExtranjera> listaMonedasExtranjeras) {
+		ConversorDeMoneda.listaMonedasExtranjeras = listaMonedasExtranjeras;
+	}
+	
+	public float CalcularValor(float monto,String moneda) {
+		for(MonedaExtranjera moneda : ConversorDeMoneda.getListaMonedasExtranjeras()) {
+			if(moneda.equals(moneda)) {
+				
+			}
+		}
+		
+		
+		return 0F;
+	}
+	
+	
+	
+	
+	
+	
+
+}

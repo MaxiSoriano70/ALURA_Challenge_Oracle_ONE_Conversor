@@ -1,0 +1,12 @@
+package com.maxisoriano.conversores.modelo;
+
+public class ConversorDeMoneda {
+	private float monto;
+	private String monedaExtranjera;
+	
+	public ConversorDeMoneda(float monto, String monedaExtranjera) {
+		this.monto = monto;
+		this.monedaExtranjera = monedaExtranjera;
+	}
+
+}

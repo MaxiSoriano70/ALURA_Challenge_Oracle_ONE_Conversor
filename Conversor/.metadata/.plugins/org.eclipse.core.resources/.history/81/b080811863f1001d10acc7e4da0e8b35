@@ -1,0 +1,19 @@
+package com.maxisoriano.conversores.accion;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class CalcularValorDeMoneda implements Accion {
+
+	@Override
+	public String ejecutar(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		float nombreEmpresa=new Float(request.getParameter("monto"););
+		String paramFechaAbertura=request.getParameter("fecha");
+		return null;
+	}
+
+}

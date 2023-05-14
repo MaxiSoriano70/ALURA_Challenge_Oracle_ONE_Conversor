@@ -1,0 +1,5 @@
+package com.maxisoriano.conversores.accion;
+
+public interface Accion {
+
+}

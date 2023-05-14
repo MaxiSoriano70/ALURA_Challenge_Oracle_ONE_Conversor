@@ -1,0 +1,5 @@
+package com.maxisoriano.conversores.accion;
+
+public interface Accion {
+	String ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException;
+}

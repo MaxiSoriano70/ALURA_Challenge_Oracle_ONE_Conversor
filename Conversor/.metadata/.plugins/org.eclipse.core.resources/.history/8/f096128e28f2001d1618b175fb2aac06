@@ -1,0 +1,37 @@
+package com.maxisoriano.conversores.accion;
+
+import java.io.IOException;
+
+import com.maxisoriano.conversores.modelo.ConversorDeMoneda;
+import com.maxisoriano.conversores.modelo.ConversorDeTemperatura;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class CalcularValorDeTemperatura implements Accion {
+
+	@Override
+	public String ejecutar(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		float temperaturaAConvetir=Float.valueOf(request.getParameter("temperatura"));
+		String modoAConvertir=request.getParameter("convetir");
+		
+		ConversorDeTemperatura conversorDeTemperatura=new ConversorDeTemperatura();
+		if(modoAConvertir.equals("Celsius a Fahrenheit")) {
+			conversorDeTemperatura.setDesicion(true);
+		}else {
+			conversorDeTemperatura.setDesicion(false);
+		}
+		ConversorDeMoneda conversorDeMoneda=new ConversorDeMoneda();
+		float resultado=conversorDeMoneda.CalcularValor(montoAConvetir, nombreMoneda);
+		
+		request.setAttribute("resultado",resultado);
+		request.setAttribute("monedaLocal",conversorDeMoneda.getMonedaLocal());
+		request.setAttribute("monedaExtranjera", nombreMoneda);
+		request.setAttribute("monto", montoAConvetir);
+		
+		return "forward:mostrarConversion.jsp";
+	}
+
+}

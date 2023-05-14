@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\Cursos\En curso\Oracle\Challenge 2\Challenge_Conversor\Conversor\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2186067759.index
+1700964714.index
+2436894111.index
+1433821579.index
+1976879834.index
+151347236.index
+1868185180.index
